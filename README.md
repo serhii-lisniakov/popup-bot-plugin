@@ -2,7 +2,7 @@
 
 Usage:
 ```
-<script async defer src="https://rawcdn.githack.com/serhii-lisniakov/popup-bot-plugin/b5369625a4beac82fbaf0582bdfd65a98cb46f1c/js/main.js"></script>
+<script async defer src="https://rawcdn.githack.com/serhii-lisniakov/popup-bot-plugin/da47adb464a8123630cecee2ac567d6484c3459f/js/main.js"></script>
 ```
 ### in html project:
 ```
