@@ -1,12 +1,13 @@
-export const options = {
-    backColor: 'rgba(106,152,60,0.5)',
+export let options = {
+    // general
+    cssPrefix: 'botplugin',
+    userName: null,
+    // main styles
+    backColor: '#46760a',
     borderColor: '#46760a',
-    height: '75%',
-    width: '220px',
-    borderRadius: '12px',
-    top: '50%',
-    right: '30px',
-
-    // button
+    textColor: '#fff',
+    height: '50%',
+    width: '300px',
+    // start button styles
     btnBackColor: '#46760a',
 }

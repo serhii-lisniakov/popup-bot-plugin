@@ -1,17 +1,28 @@
-export const layout = `
-    <div class="body">
-        <div class="top-panel">
-            <span id="drag">...</span>
-            <span id="hide">+</span>
+import { assets } from "./assets";
+import { renderMessages } from "./messages";
+
+export const getLayout = (options) => {
+    const selector = options.cssPrefix;
+    return `
+    <div class="${selector}-body">
+        <div class="${selector}-top-panel">
+            <span id="${selector}-drag">...</span>
+            <span id="${selector}-hide">+</span>
         </div>
-        <header class="header">
-            Hello There!
+        <header class="${selector}-header">
+            Hello ${options.userName ? ', ' + options.userName : 'There'}!
         </header>
-        <section class="main">
-            Let me help you!
+        <section class="${selector}-main">
+            <ul id="${selector}-ul">${renderMessages(selector)}</ul>
         </section>
-        <footer class="footer">
-            <button id="theme-change">color</button>
+        <section>
+            <form class="${selector}-input-block" id="${selector}-form">
+                <input id="${selector}-message" value="" type="text" class="${selector}-input"/>
+                ${assets(options).sendIcon}
+            </form>
+        </section>
+        <footer class="${selector}-footer">
+            <button id="${selector}-theme-change">color</button>
         </footer>
     </div>
-`
+`};
